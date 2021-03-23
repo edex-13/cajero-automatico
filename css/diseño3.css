@@ -1,0 +1,19 @@
+#tres {
+   color: #fff;
+
+   border-radius: 20px 20px 20px 20px;
+   -moz-border-radius: 20px 20px 20px 20px;
+   -webkit-border-radius: 20px 20px 20px 20px;
+
+   border: 3px solid #000000;
+   background-color: #e7a61a;
+   text-align: center;
+   display: inline-block;
+}
+
+#tres div {
+   border-radius: 53px 26px 26px 26px;
+   -moz-border-radius: 53px 26px 26px 26px;
+   -webkit-border-radius: 53px 26px 26px 26px;
+   border: 1px solid #000000;
+}

@@ -1,0 +1,101 @@
+* {
+   padding: 0px;
+   margin: 0px;
+   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+#todo {
+   width: 1300px;
+   height: 600px;
+}
+
+#uno {
+   float: left;
+
+   width: 350px;
+   height: 400px;
+   margin: 10px;
+}
+#ConPantalla {
+   width: 85%;
+   padding: 10px;
+   margin: 10px 15px 5px 15px;
+}
+#teclas {
+   width: 240px;
+   height: 300px;
+   margin: 15px 0px 15px 15px;
+   float: left;
+}
+#Botones {
+   width: 60px;
+   height: 300px;
+   margin: 25px 15px 15px 0px;
+   float: right;
+}
+#teclas div {
+   width: 240px;
+   height: 45px;
+   margin: 15px 0px;
+
+   text-align: center;
+}
+#dos {
+   float: right;
+
+   width: 910px;
+   height: 400px;
+
+   margin: 10px;
+}
+#caja {
+   width: 940px;
+   height: 200px;
+
+   margin: 10px;
+}
+
+#datosCaja {
+   width: 920px;
+   height: 60px;
+   margin: 5px 10px;
+}
+#datosCaja div {
+   width: 300px;
+   height: 50px;
+   margin: 5px;
+}
+#datosUsua {
+   width: 940px;
+   height: 180px;
+   display: flex;
+   margin: 10px;
+}
+
+#datosUsua div {
+   width: 290px;
+   height: 160px;
+   margin: 10px;
+}
+#tres {
+   width: 1280px;
+   height: 180px;
+   clear: both;
+   margin: 10px;
+}
+
+.billetesText {
+   float: left;
+
+   width: 330px;
+   height: 130px;
+   margin: 10px;
+}
+
+#billetesImg {
+   float: right;
+
+   width: 880px;
+   height: 130px;
+   margin: 10px;
+}
