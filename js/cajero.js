@@ -10,12 +10,12 @@ class Billete {
 }
 var DicImagen = [];
 
-DicImagen['500'] = 'img/500.png';
-DicImagen['200'] = 'img/200.png';
-DicImagen['100'] = 'img/100.png';
-DicImagen['50'] = 'img/50.png';
-DicImagen['20'] = 'img/20.png';
-DicImagen['10'] = 'img/10.png';
+DicImagen['500'] = '/Img/500.png';
+DicImagen['200'] = '/Img/200.png';
+DicImagen['100'] = '/Img/100.png';
+DicImagen['50'] = '/Img/50.png';
+DicImagen['20'] = '/Img/20.png';
+DicImagen['10'] = '/Img/10.png';
 
 var resultado = document.getElementById('billetesText');
 var imagenes = document.getElementById('billetesImg');
@@ -72,7 +72,7 @@ function algoritmo() {
             if (e.cantidad > 0) {
                resultado.innerHTML += e.cantidad + ' billetes de $' + e.valor + '<br />';
                for (var i = 0; i < e.cantidad; i++) {
-                  imagenes.innerHTML += '<img src=' + '"' + e.imagen.src + '"' + '/>' + '		';
+                  imagenes.innerHTML += '<img src=' + '"' + e.imagen.src + '"' + '/>';
                }
             }
          }

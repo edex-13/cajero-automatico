@@ -1,116 +1,66 @@
 <!DOCTYPE html>
-
-<html>
-   <meta charset="utf-8" />
+<html lang="es">
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <head>
       <title>Cajero automatico</title>
-      <link rel="stylesheet" type="text/css" href="css/esquema.css" />
-      <link rel="stylesheet" type="text/css" href="css/diseño1.css" />
-      <link rel="stylesheet" type="text/css" href="css/diseño2.css" />
-
-      <link rel="stylesheet" type="text/css" href="css/diseño3.css" />
+      <link rel="stylesheet" href="/css/styles.css">
    </head>
 
    <body>
-      <div id="todo">
-         <div id="uno">
-            <div id="ConPantalla">
-               <p id="pantalla"></p>
+      <header class="header">
+         <img class="logo" src="/Img/logo1.svg" alt="logo" />
+         <div>
+            <h1 class="header__titulo">Cajero Automático</h1>
+         </div>
+      </header>
+      <main class="container">
+         <div class="container__cajero">
+            <div class="container__cajero__pantalla">
+               <p class="cajero__pantalla" id="pantalla"></p>
             </div>
-            <div>
-               <div id="teclas">
-                  <div id="Te1">
-                     <button id="n1">1</button>
-                     <button id="n2">2</button>
-                     <button id="n3">3</button>
-                  </div>
-
-                  <div id="Te2">
-                     <button id="n4">4</button>
-                     <button id="n5">5</button>
-                     <button id="n6">6</button>
-                  </div>
-
-                  <div id="Te3">
-                     <button id="n7">7</button>
-                     <button id="n8">8</button>
-                     <button id="n9">9</button>
-                  </div>
-                  <div id="Te4">
-                     <button id="n0">0</button>
-                  </div>
+            <div class="container__cajero__teclado">
+               <div class="cajero__teclas_#">
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero1">1</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero2">2</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero3">3</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero4">4</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero5">5</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero6">6</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero7">7</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero8">8</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero9">9</button>
+                  <button class="btn__cajero btn__cajero__numeros" id="btn_numero0">0</button>
                </div>
-               <div id="Botones">
-                  <button id="Bo1"></button>
-                  <button id="Bo2"></button>
-                  <button id="Bo3"></button>
+               <div class="cajero__teclas__aciones">
+                  <button class="btn__cajero btn__cajero__acciones--aceptar" id="btn_aceptar"></button>
+                  <button class="btn__cajero btn__cajero__acciones--borrar" id="btn_borrar"></button>
+                  <button class="btn__cajero btn__cajero__acciones--eliminarTodo" id="btn_eliminarTodo"></button>
                </div>
             </div>
          </div>
-
-         <div id="dos">
-            <div id="caja" style="display: none">
-               <div id="valCaja">
-                  <div id="in500">
-                     <p>500 €</p>
-                     <input type="number" id="Bi500" value="10" />
-                  </div>
-                  <div id="in200">
-                     <p>200 €</p>
-                     <input type="number" id="Bi200" value="10" />
-                  </div>
-                  <div id="in100">
-                     <p>100 €</p>
-                     <input type="number" id="Bi100" value="10" />
-                  </div>
-
-                  <div id="in50">
-                     <p>50 €</p>
-                     <input type="number" id="Bi50" value="10" />
-                  </div>
-                  <div id="in20">
-                     <p>20 €</p>
-                     <input type="number" id="Bi20" value="10" />
-                  </div>
-                  <div id="in10">
-                     <p>10 €</p>
-                     <input type="number" id="Bi10" value="10" />
-                  </div>
-               </div>
-
-               <div id="datosCaja">
-                  <div id="datoCaja1">
-                     <p>Valor total:</p>
-                  </div>
-                  <div id="datoCaja2">
-                     <button id="registrar">Registrar</button>
-                  </div>
-               </div>
-            </div>
-
-            <div id="datosUsua">
-               <div id="datoUsua1">
+         
+         <div class="container__datos">
+               <div class="datos" id="montoRetiro">
                   <h4>Monto del retiro</h4>
                </div>
-               <div id="datoUsua2">
+               <div class="datos" id="detallesRetiro">
                   <h4>Cantidad restante</h4>
                </div>
-               <div id="datoUsua3">
+               <div class="datos" id="horaRetiro">
                   <h4>Datos del retiro</h4>
                </div>
             </div>
          </div>
-
-         <div id="tres">
+         <div class="container__cajaDeRetiro">
             <h3>Caja De Retiro</h3>
-            <div class="billetesText">
-               <h4>Retirado:</h4>
-               <p id="billetesText"></p>
-            </div>
-
-            <div id="billetesImg"></div>
+            <div class="cajaDeRetiro"id="retiro"></div>
          </div>
-      </div>
+      </main>
+       <footer class="footer">
+         <a target="blank" href="https://github.com/edex-13">Mi Github</a>
+      </footer>
       <script type="text/javascript" src="js/cajero.js"></script>
       <script type="text/javascript" src="js/caja.js"></script>
       <script type="text/javascript" src="js/entrega.js"></script>

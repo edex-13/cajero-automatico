@@ -1,0 +1,45 @@
+/* Importacion de la fuente */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+/* Variables de los colores */
+:root {
+   --color-white: #fff;
+   --color-black: #000;
+   --color-primary: #ffd000;
+   --color-secondary: rgb(14, 20, 27);
+   --color-terciary: #e7076c;
+}
+/* Estilos generales de la pagina */
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+.header {
+   background-color: rgb(247, 247, 247);
+   display: flex;
+   align-items: center;
+   /* padding: 20px; */
+   height: 100px;
+}
+.header__titulo {
+   font-size: 30px;
+   color: #363636;
+}
+.container{
+    min-height: calc(100vh - 100px - 50px);
+}
+
+.footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer > a {
+   text-decoration: none;
+   color: #363636;
+   font-size: 20px;
+}
+.footer > a:hover {
+   text-decoration: underline;
+}
