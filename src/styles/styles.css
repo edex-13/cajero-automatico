@@ -35,7 +35,7 @@
 .container__cajero {
    width: 320px;
    max-height: 550px;
-   background-color: rgba(0, 0, 0,.5);
+   background-color: rgba(0, 0, 0, 0.5);
    grid-row: 1/3;
    display: flex;
    flex-direction: column;
@@ -48,7 +48,7 @@
    background-color: #48c0db;
    margin-bottom: 20%;
 }
-.cajero__pantalla{
+.cajero__pantalla {
    margin: 10px;
    color: var(--color-white);
    text-align: right;
@@ -64,17 +64,15 @@
    grid-template-columns: 70px 70px 70px;
    grid-template-rows: 70px 70px 70px 70px;
    grid-gap: 5px;
-
 }
 .btn__cajero__numeros {
    background-color: #ffffff;
    border: none;
    cursor: pointer;
    font-size: 20px;
-
 }
-.btn__cajero__numeros:hover{
-   border: 1px solid #807f7f
+.btn__cajero__numeros:hover {
+   border: 1px solid #807f7f;
 }
 .btn__cajero__numeros:last-child {
    grid-column: 2 / 3;
@@ -82,6 +80,8 @@
 
 .cajero__teclas__aciones {
    display: grid;
+   align-items: center;
+   justify-content: center;
    grid-template-rows: repeat(3, 1fr);
 }
 .btn__cajero__acciones {
@@ -89,24 +89,29 @@
    height: 70px;
    border: none;
 }
-.btn__cajero__acciones:hover{
+.btn__cajero__acciones:hover {
    cursor: pointer;
 }
-.btn__cajero__acciones--aceptar{
-   background-color: #1b851b;;
+.btn__cajero__acciones--aceptar {
+   background-color: #1b851b;
 }
-.btn__cajero__acciones--borrar{
+.btn__cajero__acciones--borrar {
    background-color: #e4e431;
 }
-.btn__cajero__acciones--eliminarTodo{
+.btn__cajero__acciones--eliminarTodo {
    background-color: #ea2c2c;
 }
 
 .container__datos {
    grid-column: 2 / 4;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.container__datos > div {
+   margin: 10px;
 }
 .container__cajaDeRetiro {
-   background-color: red;
    grid-column: 2 / 4;
 }
 
@@ -133,6 +138,11 @@
    .container > div {
       grid-column: 1/2;
    }
+   .container__cajero {
+      width: 70%;
+   }
+}
+@media (max-width: 425px) {
    .container__cajero {
       width: auto;
    }
