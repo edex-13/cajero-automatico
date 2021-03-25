@@ -37,7 +37,46 @@
    max-height: 550px;
    background-color: red;
    grid-row: 1/3;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
 }
+.container__cajero__pantalla{
+   width: 90%;
+   min-height:30px ;
+   background-color: yellow;
+}
+.container__cajero__teclado{
+   display: flex;
+}
+.cajero__teclas_n {
+   display: grid;
+   grid-template-columns: 70px 70px 70px;
+   grid-template-rows: 70px 70px 70px 70px;
+   grid-gap: 5px;
+}
+.btn__cajero__numeros {
+   justify-self: stretch;
+   align-self: stretch;
+}
+.btn__cajero__numeros:last-child {
+   grid-column: 2 / 3;
+}
+.cajero__teclas__aciones {
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 5px;
+}
+.btn__cajero__acciones {
+   width: 70px;
+   height: 70px;
+   margin: 7px 0px;
+}
+
 .container__datos {
    grid-column: 2 / 4;
 }
