@@ -35,7 +35,7 @@
 .container__cajero {
    width: 320px;
    max-height: 550px;
-   background-color: red;
+   background-color: rgba(0, 0, 0,.5);
    grid-row: 1/3;
    display: flex;
    flex-direction: column;
@@ -44,9 +44,15 @@
 }
 .container__cajero__pantalla {
    width: 90%;
-   min-height: 30px;
-   background-color: yellow;
-   margin-bottom: 30%;
+   min-height: 40px;
+   background-color: #48c0db;
+   margin-bottom: 20%;
+}
+.cajero__pantalla{
+   margin: 10px;
+   color: var(--color-white);
+   text-align: right;
+   font-size: 20px;
 }
 .container__cajero__teclado {
    display: grid;
@@ -58,14 +64,22 @@
    grid-template-columns: 70px 70px 70px;
    grid-template-rows: 70px 70px 70px 70px;
    grid-gap: 5px;
+
 }
 .btn__cajero__numeros {
-   justify-self: stretch;
-   align-self: stretch;
+   background-color: #ffffff;
+   border: none;
+   cursor: pointer;
+   font-size: 20px;
+
+}
+.btn__cajero__numeros:hover{
+   border: 1px solid #807f7f
 }
 .btn__cajero__numeros:last-child {
    grid-column: 2 / 3;
 }
+
 .cajero__teclas__aciones {
    display: grid;
    grid-template-rows: repeat(3, 1fr);
@@ -73,6 +87,19 @@
 .btn__cajero__acciones {
    width: 70px;
    height: 70px;
+   border: none;
+}
+.btn__cajero__acciones:hover{
+   cursor: pointer;
+}
+.btn__cajero__acciones--aceptar{
+   background-color: #1b851b;;
+}
+.btn__cajero__acciones--borrar{
+   background-color: #e4e431;
+}
+.btn__cajero__acciones--eliminarTodo{
+   background-color: #ea2c2c;
 }
 
 .container__datos {
