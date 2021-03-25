@@ -1,0 +1,19 @@
+{
+  "name": "cajero-automatico",
+  "version": "1.0.0",
+  "description": "Version dos de mi primer proyecto de programacion",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edex-13/cajero-automatico.git"
+  },
+  "author": "ederson12f@gmail.com <ederson12f@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edex-13/cajero-automatico/issues"
+  },
+  "homepage": "https://github.com/edex-13/cajero-automatico#readme"
+}
