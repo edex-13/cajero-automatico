@@ -1,5 +1,4 @@
 import mostrarNumeros from '../utils/mostrarNumeros.js'
-let cantidadDeLetras = 0;
 class btn {
    constructor(id, valor) {
       this.id = document.getElementById(id);
@@ -7,8 +6,7 @@ class btn {
    }
    agregarEventoClick() {
       this.id.addEventListener('click', () => {
-         mostrarNumeros(cantidadDeLetras, this.valor)
-         cantidadDeLetras++;
+         mostrarNumeros(this.valor)
       });
    }
 }

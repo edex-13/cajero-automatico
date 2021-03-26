@@ -1,2 +1,4 @@
-import mostrar from './js/botones.js'
-mostrar()
+import btnNumeros from './js/btnNumeros.js'
+import btnAcciones from './js/btnAcciones.js'
+btnNumeros()
+btnAcciones()
