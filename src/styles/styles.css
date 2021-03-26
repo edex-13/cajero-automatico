@@ -3,10 +3,12 @@
 /* Variables de los colores */
 :root {
    --color-white: #fff;
-   --color-black: #000;
-   --color-primary: #ffd000;
-   --color-secondary: rgb(14, 20, 27);
-   --color-text: #363636;
+   --color-gris:rgba(0, 0, 0, 0.5);
+   --color-primario: #48c0db;
+   --color-texto: #363636;
+   --color-aceptar: #1b851b;
+   --color-eliminar: #e4e431;
+   --color-eliminarTodo: #ea2c2c;
 }
 /* Estilos generales de la pagina */
 * {
@@ -22,7 +24,7 @@
 }
 .header__titulo {
    font-size: 30px;
-   color: var(--color-text);
+   color: var(--color-texto);
 }
 .container {
    min-height: calc(100vh - 100px - 80px);
@@ -35,21 +37,29 @@
 .container__cajero {
    width: 320px;
    max-height: 550px;
-   background-color: red;
+   background-color: var(--color-gris);
    grid-row: 1/3;
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
    padding: 20px;
 }
-.container__cajero__pantalla{
+.container__cajero__pantalla {
    width: 90%;
-   min-height:30px ;
-   background-color: yellow;
+   min-height: 40px;
+   background-color: var(--color-primario);
+   margin-bottom: 20%;
 }
-.container__cajero__teclado{
-   display: flex;
+.cajero__pantalla {
+   margin: 10px;
+   color: var(--color-white);
+   text-align: right;
+   font-size: 20px;
+}
+.container__cajero__teclado {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 20px;
 }
 .cajero__teclas_n {
    display: grid;
@@ -58,30 +68,52 @@
    grid-gap: 5px;
 }
 .btn__cajero__numeros {
-   justify-self: stretch;
-   align-self: stretch;
+   background-color: var(--color-white);
+   border: none;
+   cursor: pointer;
+   font-size: 20px;
+}
+.btn__cajero__numeros:hover {
+   border: 1px solid #807f7f;
 }
 .btn__cajero__numeros:last-child {
    grid-column: 2 / 3;
 }
+
 .cajero__teclas__aciones {
-   display: flex; 
-   justify-content: center;
+   display: grid;
    align-items: center;
-   flex-direction: column;
-   margin: 5px;
+   justify-content: center;
+   grid-template-rows: repeat(3, 1fr);
 }
 .btn__cajero__acciones {
    width: 70px;
    height: 70px;
-   margin: 7px 0px;
+   border: none;
+}
+.btn__cajero__acciones:hover {
+   cursor: pointer;
+}
+.btn__cajero__acciones--aceptar {
+   background-color: var(--color-aceptar);
+}
+.btn__cajero__acciones--borrar {
+   background-color: var(--color-eliminar);
+}
+.btn__cajero__acciones--eliminarTodo {
+   background-color: var(--color-eliminarTodo);
 }
 
 .container__datos {
    grid-column: 2 / 4;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.container__datos > div {
+   margin: 10px;
 }
 .container__cajaDeRetiro {
-   background-color: red;
    grid-column: 2 / 4;
 }
 
@@ -108,6 +140,11 @@
    .container > div {
       grid-column: 1/2;
    }
+   .container__cajero {
+      width: 70%;
+   }
+}
+@media (max-width: 425px) {
    .container__cajero {
       width: auto;
    }
