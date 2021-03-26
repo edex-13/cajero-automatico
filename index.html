@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <head>
       <title>Cajero automatico</title>
-      <link rel="stylesheet" href="src/styles/styles.css">
+      <link rel="stylesheet" href="src/styles/styles.css" />
    </head>
 
    <body>
@@ -18,7 +18,7 @@
       <main class="container">
          <div class="container__cajero">
             <div class="container__cajero__pantalla">
-               <p class="cajero__pantalla" id="pantalla">00000</p>
+               <p class="cajero__pantalla" id="pantallaCajero"></p>
             </div>
             <div class="container__cajero__teclado">
                <div class="cajero__teclas_n">
@@ -39,31 +39,13 @@
                   <button class="btn__cajero__acciones btn__cajero__acciones--eliminarTodo" id="btn_eliminarTodo"></button>
                </div>
             </div>
+            <div class="container__datos"></div>
+            <div class="container__cajaDeRetiro"></div>
          </div>
-         
-         <!-- <div class="container__datos">
-               <div class="datos" id="montoRetiro">
-                  <h4>Monto del retiro</h4>
-                  <span>23456</span>
-               </div>
-               <div class="datos" id="detallesRetiro">
-                  <h4>Cantidad de dinero restante</h4>
-                  <span>23456</span>
-               </div>
-               <div class="datos" id="horaRetiro">
-                  <h4>Datos del retiro</h4>
-                  <span>23456</span>
-               </div>
-            </div>
-         </div>
-         <div class="container__cajaDeRetiro">
-            <h3>Caja De Retiro</h3>
-            <div class="cajaDeRetiro"id="retiro"></div>
-         </div> -->
       </main>
       <footer class="footer">
          <a target="blank" href="https://github.com/edex-13">Mi Github</a>
       </footer>
-      <script type="module"src="/src/index.js"></script>
+      <script type="module" src="src/index.js"></script>
    </body>
 </html>

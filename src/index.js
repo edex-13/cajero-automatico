@@ -1,1 +1,2 @@
-console.log("PRUEBA")
+import mostrar from './js/botones.js'
+mostrar()
