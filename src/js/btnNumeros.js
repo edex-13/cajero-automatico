@@ -1,4 +1,4 @@
-import mostrarNumeros from '../utils/mostrarNumeros.js'
+import mostrarNumeros from '../utils/mostrarNumeros.js';
 class btn {
    constructor(id, valor) {
       this.id = document.getElementById(id);
@@ -6,7 +6,7 @@ class btn {
    }
    agregarEventoClick() {
       this.id.addEventListener('click', () => {
-         mostrarNumeros(this.valor)
+         mostrarNumeros(this.valor);
       });
    }
 }
@@ -24,9 +24,9 @@ colecionBotones.push(new btn('btn_numero8', 8));
 colecionBotones.push(new btn('btn_numero9', 9));
 colecionBotones.push(new btn('btn_numero0', 0));
 
-function agregarEventoClick() {
+const agregarEventoClick = () => {
    colecionBotones.forEach((btn) => {
       btn.agregarEventoClick();
    });
-}
+};
 export default agregarEventoClick;
