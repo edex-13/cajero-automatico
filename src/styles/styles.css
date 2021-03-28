@@ -1,0 +1,136 @@
+/* Importacion de la fuente */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+/* Variables de los colores */
+:root {
+   --color-white: #fff;
+   --color-fono:rgb(85, 188, 236);
+   --color-pantalla: #575555;
+   --color-texto: #363636;
+   --color-aceptar: #1b851b;
+   --color-eliminar: #e4e431;
+   --color-eliminarTodo: #ea2c2c;
+}
+/* Estilos generales de la pagina */
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Open Sans', sans-serif;
+}
+.header {
+   background-color: rgb(247, 247, 247);
+   display: flex;
+   align-items: center;
+   height: 100px;
+}
+.header__titulo {
+   font-size: 30px;
+   color: var(--color-texto);
+}
+.container {
+   min-height: calc(100vh - 100px - 80px);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 25px;
+   margin: 15px 20px 0px;
+}
+
+.container__cajero {
+   width: 320px;
+   max-height: 550px;
+   background-color: var(--color-fono);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+.container__cajero__pantalla {
+   width: 90%;
+   min-height: 40px;
+   background-color: var(--color-pantalla);
+   margin-bottom: 20%;
+}
+.cajero__pantalla {
+   margin: 10px;
+   color: var(--color-white);
+   text-align: right;
+   font-size: 20px;
+}
+.container__cajero__teclado {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 20px;
+}
+.cajero__teclas_n {
+   display: grid;
+   grid-template-columns: 70px 70px 70px;
+   grid-template-rows: 70px 70px 70px 70px;
+   grid-gap: 5px;
+}
+.btn__cajero__numeros {
+   background-color: var(--color-white);
+   border: none;
+   cursor: pointer;
+   font-size: 20px;
+}
+.btn__cajero__numeros:hover {
+   border: 1px solid #807f7f;
+}
+.btn__cajero__numeros:last-child {
+   grid-column: 2 / 3;
+}
+
+.cajero__teclas__aciones {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   grid-template-rows: repeat(3, 1fr);
+}
+.btn__cajero__acciones {
+   width: 70px;
+   height: 70px;
+   border: none;
+}
+.btn__cajero__acciones:hover {
+   cursor: pointer;
+}
+.btn__cajero__acciones--aceptar {
+   background-color: var(--color-aceptar);
+}
+.btn__cajero__acciones--borrar {
+   background-color: var(--color-eliminar);
+}
+.btn__cajero__acciones--eliminarTodo {
+   background-color: var(--color-eliminarTodo);
+}
+.footer {
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.footer > a {
+   text-decoration: none;
+   color: var(--color-text);
+   font-size: 20px;
+}
+.footer > a:hover {
+   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+   .container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 30px;
+   }
+   .container > div {
+      grid-column: 1/2;
+   }
+   .container__cajero {
+      width: 70%;
+   }
+}
+@media (max-width: 445px) {
+   .container__cajero {
+      width: auto;
+   }
+}
