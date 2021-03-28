@@ -3,8 +3,8 @@
 /* Variables de los colores */
 :root {
    --color-white: #fff;
-   --color-gris:rgba(0, 0, 0, 0.5);
-   --color-primario: #48c0db;
+   --color-fono:rgb(85, 188, 236);
+   --color-pantalla: #575555;
    --color-texto: #363636;
    --color-aceptar: #1b851b;
    --color-eliminar: #e4e431;
@@ -29,7 +29,7 @@
 .container {
    min-height: calc(100vh - 100px - 80px);
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(2, 1fr);
    grid-gap: 25px;
    margin: 15px 20px 0px;
 }
@@ -37,8 +37,7 @@
 .container__cajero {
    width: 320px;
    max-height: 550px;
-   background-color: var(--color-gris);
-   grid-row: 1/3;
+   background-color: var(--color-fono);
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -47,7 +46,7 @@
 .container__cajero__pantalla {
    width: 90%;
    min-height: 40px;
-   background-color: var(--color-primario);
+   background-color: var(--color-pantalla);
    margin-bottom: 20%;
 }
 .cajero__pantalla {
@@ -103,20 +102,6 @@
 .btn__cajero__acciones--eliminarTodo {
    background-color: var(--color-eliminarTodo);
 }
-
-.container__datos {
-   grid-column: 2 / 4;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-}
-.container__datos > div {
-   margin: 10px;
-}
-.container__cajaDeRetiro {
-   grid-column: 2 / 4;
-}
-
 .footer {
    height: 50px;
    display: flex;
@@ -144,7 +129,7 @@
       width: 70%;
    }
 }
-@media (max-width: 425px) {
+@media (max-width: 445px) {
    .container__cajero {
       width: auto;
    }
